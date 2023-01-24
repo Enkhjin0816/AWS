@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.256.0",
+    "@aws-sdk/util-dynamodb": "^3.256.0",
+    "aws-sdk": "^2.1300.0"
+  },
+  "scripts": {
+    "deploy": "yarn zip && aws lambda update-function-code --function-name myFunction --zip-file fileb://test.zip",
+    "zip": "zip -r test.zip ./"
+  }
+}
